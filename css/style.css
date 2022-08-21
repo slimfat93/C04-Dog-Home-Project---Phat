@@ -3,6 +3,7 @@
   --divBackGroundColor: orange;
   --textBackGroundColor: grey;
   --showcardBackGroundColor: navy;
+  --hoverColor: rgb(222, 219, 219);
 }
 * {
   box-sizing: border-box;
@@ -19,17 +20,18 @@ body {
 .section {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: var(--backGroundColor);
 }
 
-#header {
+header {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url(/pics/header-bground-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100% 100%;
+  background-position: 100% 90%;
   opacity: 0.8;
   background-color: black;
   display: flex;
@@ -38,25 +40,25 @@ body {
   justify-content: space-between;
 }
 
-.top-header {
+.top-section-header {
   width: 100%;
   height: 150px;
   display: flex;
   flex-direction: row;
   padding: 0px 30px;
-  flex-wrap: nowrap;
-  align-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
-#top-header-logo {
+#top-section-header-logo {
   color: var(--backGroundColor);
   font-size: 50px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-#top-header-navbar {
+#top-section-header-navbar {
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -78,46 +80,95 @@ ul > li:hover {
   border-radius: 5px;
   font-weight: bold;
 }
-.main-header {
-  width: 70%;
-  height: 60%;
+/*dropdown list edit */
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: var(--backGroundColor);
+  z-index: 1;
+  max-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--hoverColor);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main-section-header {
+  width: 100%;
   color: var(--backGroundColor);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
-#main-header-h2 {
-  font-size: 60px;
+.main-section-header a:hover {
+  background-color: var(--hoverColor);
+}
+#main-section-header-h2 {
+  font-size: 70px;
   margin: 0px;
 }
 
-#main-header-p {
-  width: 70%;
+#main-section-header-p {
   font-size: 20px;
+  width: 50%;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-#link-readmore {
+#link-readmore-section-header {
   padding: 10px;
   color: var(--backGroundColor);
   border: 3px var(--backGroundColor) solid;
   border-radius: 5px;
   text-decoration: none;
   font-size: 20px;
-  margin-top: 30px;
   font-weight: bold;
+  width: 150px;
+  margin-bottom: 10px;
 }
 
-.div-dots {
+#link-readmore-section-header:hover {
+  color: black;
+}
+
+.div-dots-main-section-header {
   text-align: center;
   margin-bottom: 20px;
+  align-self: flex-end;
 }
 .dot {
   cursor: pointer;
   height: 10px;
   width: 10px;
+  max-width: 10px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -127,40 +178,50 @@ ul > li:hover {
 .dot:hover {
   background-color: var(--backGroundColor);
 }
+
+#welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backGroundColor);
+}
 .div-content-welcome {
-  width: 80%;
+  width: 90%;
   height: 100%;
-  margin: 80px 0px;
+  margin: 60px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: nowrap;
-  align-content: center;
   text-align: center;
+  justify-content: space-between;
+  margin: 0px;
 }
 
 #welcome-h2 {
   width: 100%;
-  margin: 20px 0px;
+  margin: 0px;
   font-size: 55px;
+  margin-top: 10px;
 }
 #welcome-p {
-  margin: 20px 0px;
+  margin: 0px;
   width: 80%;
-  font-size: 20px;
+  font-size: 25px;
 }
 #welcome-pic {
   width: 100%;
-  height: 600px;
+  height: 70%;
   object-fit: cover;
   object-position: center;
-  margin: 30px 0px;
+  margin: 0px;
 }
 
 .div-content-whatwedo {
-  width: 80%;
+  width: 90%;
   height: 100%;
-  margin: 0px 0px 80px 0px;
+  margin: 0px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,17 +271,19 @@ ul > li:hover {
 }
 
 #statistics {
-  height: 500px;
+  height: 100vh;
+  width: 100%;
   background-image: url(/pics/statistics-bground-img.jpg);
   background-repeat: no-repeat;
-  background-size: inherit;
-  background-clip: border-box;
-  background-position: 40% 45%;
+  background-size: unset;
+  background-position-x: -200px;
+  background-position-y: 38%;
   opacity: 0.5;
   background-color: black;
-  align-items: center;
+  display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #statistics-h2 {
@@ -230,7 +293,7 @@ ul > li:hover {
   align-items: center;
   justify-content: center;
   color: var(--backGroundColor);
-  font-size: 50px;
+  font-size: 60px;
 }
 .div-stat-showcard {
   width: 85%;
@@ -250,7 +313,7 @@ ul > li:hover {
 }
 
 .stat-h3 {
-  font-size: 100px;
+  font-size: 130px;
   margin: 0px;
 }
 
@@ -261,11 +324,12 @@ ul > li:hover {
 }
 
 .div-services-content {
-  width: 80%;
-  height: 90%;
-  padding: 80px 0px;
+  width: 90%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .service-content-left {
@@ -287,7 +351,7 @@ ul > li:hover {
 #white-box-p {
   font-weight: bold;
   font-size: 13px;
-  padding-right: 10px;
+  padding-right: 25px;
   color: gray;
 }
 
@@ -303,9 +367,9 @@ ul > li:hover {
   width: 50%;
   height: 50%;
   background-image: url(/pics/Max-the-corgi-1.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 100%;
+  background-position: 100% 100%;
   border: 5px solid white;
   object-fit: cover;
   display: flex;
@@ -313,7 +377,6 @@ ul > li:hover {
   flex-direction: column;
   text-align: center;
   justify-content: space-evenly;
-  padding: 20px;
 }
 
 .apple-logo {
