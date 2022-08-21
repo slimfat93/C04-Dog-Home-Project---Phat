@@ -75,7 +75,7 @@ ul > li {
 }
 
 ul > li:hover {
-  background-color: var(--backGroundColor);
+  background-color: white;
   color: black;
   border-radius: 5px;
   font-weight: bold;
