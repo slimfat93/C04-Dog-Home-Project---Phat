@@ -16,16 +16,14 @@ body {
   flex-direction: column;
   background-color: var(--backGroundColor);
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .section {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   background-color: var(--backGroundColor);
+  display: contents;
 }
 
 header {
@@ -56,7 +54,6 @@ header {
 }
 .top-section-header {
   width: 100%;
-  height: 20vh;
   display: flex;
   flex-direction: row;
   padding: 0px 30px;
@@ -124,7 +121,7 @@ li a:hover,
 }
 
 .dropdown-content a:hover {
-  background-color: var(--hoverColor);
+  background-color: var(--backGroundColor);
 }
 
 .dropdown:hover .dropdown-content {
@@ -231,10 +228,13 @@ li a:hover,
   margin: 0px;
 }
 
+#what-we-do {
+  width: 100%;
+}
 .div-content-whatwedo {
   width: 90%;
   height: 100%;
-  margin: 0px 0px 0px 0px;
+  margin: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,7 +305,6 @@ li a:hover,
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
-  background-position-y: 40%;
   opacity: 1;
   background-color: black;
   display: flex;
@@ -313,17 +312,16 @@ li a:hover,
   align-items: center;
   justify-content: center;
   margin: 30px 0px;
-  padding: 20px 0px;
+  padding: 65px 0px;
 }
 
 #statistics-h2 {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   color: var(--backGroundColor);
   font-size: 30px;
   margin: 0px;
+  text-align: center;
+  padding: 20px 0px;
 }
 .div-stat-showcard {
   width: 85%;
@@ -346,19 +344,25 @@ li a:hover,
 }
 
 .stat-h4 {
-  font-size: 13px;
+  font-size: 18px;
   margin: 0px;
 }
 
-.div-services-content {
+#services {
   width: 100%;
-  height: 100vh;
+}
+.div-services-content {
+  width: 90%;
+  height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  margin: 0px;
+  align-items: center;
+  margin: 20px 0px;
 }
 
+.services {
+  margin: 20px 0px;
+}
 .service-content-left {
   width: 30%;
   display: flex;
@@ -432,7 +436,6 @@ footer p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
-  background-position-y: 40%;
   opacity: 1;
   background-color: black;
   display: flex;
@@ -667,4 +670,427 @@ footer {
 .fb-f-svg-link {
   font-size: 25px;
   color: var(--backGroundColor);
+}
+
+.section-contact-us {
+  width: 36%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  margin: 20px 0px 0px;
+}
+
+.div-contactInfo {
+  width: 100%;
+  padding: 0px 20px 20px;
+}
+#fa-house-icon,
+#fa-mail-icon,
+#fa-phone-icon {
+  width: 27px;
+  display: flex;
+  font-size: 27px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 40px;
+}
+#contact-us-title1 {
+  font-size: 25px;
+  margin: 12px 0px 12px;
+  line-height: 28px;
+}
+#contact-us-description {
+  margin: 5px 0px;
+  font-size: 13px;
+  color: gray;
+}
+
+.contact-info-title {
+  font-size: 25px;
+  margin: 20px 0px 15px;
+  color: orange;
+}
+.contactInfos {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 10px;
+  align-items: left;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.contactInfoIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-us-address {
+  display: flex;
+  flex-direction: column;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+  width: 90%;
+  background-color: rgb(238, 235, 235);
+  margin: 20px 0px;
+  padding: 10px 10px;
+  border-radius: 10px 10px;
+  box-shadow: 3px 3px rgb(184, 182, 182);
+}
+
+.input-form-input {
+  margin: 5px 0px;
+  width: 100%;
+}
+
+.yourNameEmailMessage {
+  width: 100%;
+  max-width: 100%;
+}
+::placeholder {
+  color: gray;
+}
+
+textarea {
+  height: 100px;
+}
+.inputFormButton {
+  width: 100%;
+  line-height: 240%;
+  border-radius: 5px 5px;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  font-weight: bold;
+  padding: 0px 8px;
+}
+/* hide checkbox and it's label */
+#label,
+#toggle {
+  display: none;
+}
+
+.contact-us-title {
+  font-size: 40px;
+  margin: 15px 0px 0px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* show label and css for checkbox */
+  #label {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    width: auto;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  /* when checkbox status is: checked then ul will show */
+  #toggle:checked + ul {
+    display: block;
+    width: 100%;
+  }
+
+  #top-section-header-logo {
+    color: var(--backGroundColor);
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  /* hide nav bar */
+  #top-section-header-navbar {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    flex-direction: column;
+    padding: 0px 0px;
+    text-align: center;
+  }
+  .top-section-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 30px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding: 0px;
+  }
+  #main-section-header-h2 {
+    font-size: 80px;
+    margin: 30px 0px;
+    line-height: 87px;
+  }
+  #main-section-header-p {
+    font-size: 20px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  #link-readmore-section-header {
+    padding: 10px;
+    color: var(--backGroundColor);
+    border: 3px var(--backGroundColor) solid;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    margin: 10px 0px;
+  }
+
+  .div-dots-main-section-header {
+    text-align: center;
+    margin: 20px 0px;
+    align-self: flex-end;
+  }
+
+  .dropdown-content {
+    left: 52%;
+  }
+
+  ul > li {
+    margin: 0px;
+    font-size: 35px;
+    padding: 0px;
+    border-radius: 0px;
+  }
+  ul > li > a {
+    width: 100%;
+  }
+  .showcard {
+    width: 50%;
+  }
+
+  .div-stat-showcard {
+    width: 85%;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    width: 50%;
+    color: white;
+  }
+
+  .stat-h3 {
+    font-size: 70px;
+    margin: 0px;
+  }
+
+  .stat-h4 {
+    font-size: 18px;
+    margin: 0px;
+  }
+  .section-contact-us {
+    display: flex;
+    width: 80%;
+    padding: 20px 0px;
+  }
+  .section-contact-us-main {
+    display: flex;
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 10px 10px; */
+    width: 90%;
+    background-color: rgb(238, 235, 235);
+    /* margin: 20px 0px; */
+    padding: 10px 10px;
+    border-radius: 10px 10px;
+    box-shadow: 3px 3px rgb(184 182 182);
+    justify-content: space-evenly;
+  }
+  textarea {
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #main-section-header-h2 {
+    font-size: 66px;
+    margin: 30px 0px 0px 0px;
+    line-height: 87px;
+  }
+  #main-section-header-p {
+    font-size: 20px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  #welcome-h2 {
+    margin: 0px;
+  }
+
+  #welcome-p {
+    margin: 20px 0px;
+  }
+
+  #statistics {
+    background-position-x: 29%;
+    margin: 0px;
+  }
+  .showcard {
+    width: 100%;
+  }
+  .stat-card {
+    width: 100%;
+    color: white;
+  }
+  .stat-h3 {
+    font-size: 92px;
+  }
+  .stat-h4 {
+    font-size: 30px;
+    margin: 10px 0px;
+  }
+  #services {
+  }
+  .div-services-content {
+    flex-direction: column;
+  }
+
+  .service-content-left {
+    width: 90%;
+    text-align: center;
+    margin: 0px;
+  }
+  .service-content-right {
+    width: 100%;
+  }
+  .orange-box {
+    width: 100%;
+    height: 50%;
+    background-image: url(./pics/Max-the-corgi-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 90%;
+    border: 5px solid white;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 30px;
+  }
+  #white-box-h3 {
+    margin-bottom: 20px;
+  }
+  #white-box-p {
+    margin-bottom: 20px;
+  }
+  #sectionTestimonial {
+    margin: unset;
+  }
+
+  #sectionTestimonial {
+    width: 100%;
+    background-image: url(./pics/statistics-bground-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #sectionTestimonial-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .sectionTestimonial-div-showcard {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimony-signature {
+    width: 53%;
+    color: var(--divBackGroundColor);
+    text-align: right;
+    margin: 0px;
+    font-size: 43px;
+  }
+  #blogIntro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .blogIntroDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blogIntrodivCard {
+    width: 90%;
+    border: 1px solid grey;
+    padding: 0px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 15px;
+  }
+
+  .blogIntrodivCard-img {
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  footer {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #newsLetter,
+  #contacts {
+    width: 100%;
+  }
+
+  .footerDivs {
+    width: 50%;
+    margin: 10px 0px;
+  }
+
+  .footerDivp {
+    font-size: 15px;
+  }
+
+  #inPutemail {
+    width: 65%;
+  }
+  .footerWhoweAre {
+    float: right;
+  }
+  .section-contact-us-main {
+    display: flex;
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    flex-direction: column;
+  }
 }
